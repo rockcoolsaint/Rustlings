@@ -6,6 +6,11 @@ trait AppendBar {
 
 impl AppendBar for String {
     // TODO: Implement `AppendBar` for the type `String`.
+    fn append_bar(mut self) -> String {
+        // format!("{}{}",self,"Bar") //This line is correct without the next two lines
+        self.push_str("Bar");
+        self
+    }
 }
 
 fn main() {
